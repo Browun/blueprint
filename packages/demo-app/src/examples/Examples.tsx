@@ -45,6 +45,7 @@ import { TextExample } from "./TextExample";
 import { ToastExample } from "./ToastExample";
 import { TooltipExample } from "./TooltipExample";
 import { TreeExample } from "./TreeExample";
+import { TreeVirtualizedExample } from "./TreeVirtualizedExample";
 
 export class Examples extends React.PureComponent {
     private renderExamples(className?: string) {
@@ -76,6 +77,7 @@ export class Examples extends React.PureComponent {
                 <ToastExample />
                 <TooltipExample />
                 <TreeExample />
+                <TreeVirtualizedExample />
             </div>
         );
     }

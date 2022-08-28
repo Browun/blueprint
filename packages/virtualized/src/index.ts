@@ -14,7 +14,4 @@
  * limitations under the License.
  */
 
-import * as classes from "./common/classes";
-
-export const Classes = classes;
-export { VirtualizedTable, VirtualizedTableProps } from "./example";
+export * from "./components";

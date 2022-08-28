@@ -14,8 +14,4 @@
  * limitations under the License.
  */
 
-const ns = "[Blueprint Table]";
-// const deprec = `${ns} DEPRECATION:`;
-
-export const PROPS_UNDEFINED = ns + ` Properties are undefined.`;
-export const EMPTY_TITLE = ns + ` Title is set as empty.`;
+export * from "./tree/treeVirtualized";

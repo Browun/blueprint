@@ -4,10 +4,10 @@ reference: virtualized
 
 @# Virtualized
 
-The [\__@blueprintjs/virtualized_ NPM package](https://www.npmjs.com/package/@blueprintjs/virtualized)
+The [__@blueprintjs/virtualized__ package](https://www.npmjs.com/package/@blueprintjs/virtualized)
 provides several virtualized components :
 
--   TODO
+- [Virtualized Tree](#virtualized/tree-virtualized)
 
 Make sure to review the [getting started docs for installation info](#blueprint/getting-started).
 
@@ -26,3 +26,5 @@ Import CSS with a JS bundler like webpack:
 ```html
 <link href="path/to/node_modules/@blueprintjs/virtualized/lib/css/blueprint-virtualized.css" rel="stylesheet" />
 ```
+
+@page tree-virtualized

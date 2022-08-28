@@ -14,4 +14,5 @@
  * limitations under the License.
  */
 
-export { VirtualizedTableExample } from "./virtualizedExample";
+// export * from "./virtualizedTableExample";
+export * from "./treeVirtualizedExample";

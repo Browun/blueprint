@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2019 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,19 @@
  * limitations under the License.
  */
 
-import { assert } from "chai";
+const inliner = require("@vgrid/sass-inline-svg");
 
-describe("<VirtualizedTable>", () => {
-    it("Always true", () => {
-        assert.isTrue(true);
-    });
-});
+module.exports = {
+    /**
+     * Sass function to inline a UI icon svg and change its path color.
+     *
+     * Usage:
+     * svg-icon("16px/icon-name.svg", (path: (fill: $color)) )
+     */
+    "svg-icon($path, $selectors: null)": inliner("../../resources/icons", {
+        // run through SVGO first
+        optimize: true,
+        // minimal "uri" encoding is smaller than base64
+        encodingFormat: "uri",
+    }),
+};

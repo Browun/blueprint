@@ -19,6 +19,7 @@ import * as ReactDOM from "react-dom";
 import { FocusStyleManager } from "@blueprintjs/core";
 
 import { Examples } from "./examples/Examples";
+import { TreeVirtualizedExample } from "./examples/TreeVirtualizedExample";
 
 FocusStyleManager.onlyShowFocusOnTabs();
 
@@ -28,3 +29,5 @@ FocusStyleManager.onlyShowFocusOnTabs();
     await import("./index.scss");
     ReactDOM.render(<Examples />, document.querySelector("#blueprint-demo-app"));
 })();
+
+ReactDOM.render(<TreeVirtualizedExample />, document.querySelector("#blueprint-demo-app"));

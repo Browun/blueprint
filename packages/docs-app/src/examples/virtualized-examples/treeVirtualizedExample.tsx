@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2017 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import { Classes } from "@blueprintjs/core";
+import { TreeVirtualized } from "@blueprintjs/virtualized";
 
-const NS = Classes.getClassNamespace();
-
-export const VIRTUALIZED_TABLE = `${NS}-virtualized-table`;
+export function TreeVirtualizedExample(): JSX.Element {
+    return TreeVirtualized({ foo: "foo" });
+}

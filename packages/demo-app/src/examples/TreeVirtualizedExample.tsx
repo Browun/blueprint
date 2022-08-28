@@ -1,5 +1,5 @@
 /*
- * Copyright 2015 Palantir Technologies, Inc. All rights reserved.
+ * Copyright 2022 Palantir Technologies, Inc. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,13 @@
  * limitations under the License.
  */
 
-import { assert } from "chai";
+import * as React from "react";
+// import { TreeVirtualized } from "@blueprintjs/virtualized";
 
-describe("<VirtualizedTable>", () => {
-    it("Always true", () => {
-        assert.isTrue(true);
-    });
-});
+// import { ExampleCard } from "./ExampleCard";
+
+// const WIDTH = 600;
+export const TreeVirtualizedExample = () => {
+    return <div>Example Virtualized Tree !</div>;
+};
+TreeVirtualizedExample.displayName = "TreeVirtualizedExample";
