@@ -4,10 +4,54 @@
 
 import * as React from "react";
 
-export interface ITreeVirtualized {
-    foo: string;
+import { ITreeNode, TreeNode } from "./treeNodeVirtualized";
+
+{
+    /** Total tree view */
+    /*
+<div class="#{$ns}-tree #{$ns}-elevation-0">
+  <ul class="#{$ns}-tree-node-list #{$ns}-tree-root">
+    // NODE
+  </ul>
+</div>
+*/
 }
 
-export function TreeVirtualized(_props: ITreeVirtualized): JSX.Element {
-    return <div>"TreeVirtualized component"</div>;
+export interface ITreeVirtualizedProps {
+    /**
+     * Data to be presented within the tree.
+     */
+    content: ITreeNode[];
+
+    /**
+     * The fixed height for the tree component in px.
+     */
+    height?: number;
+
+    /**
+     * The fixed wdith for the tree component in px.
+     */
+    width?: number;
+}
+
+export function TreeVirtualized(props: ITreeVirtualizedProps): JSX.Element {
+    const { content } = props;
+
+    const [treeData, setTreeData] = React.useState(content);
+
+    return (
+        <div>
+            <ul>
+                {treeData.flatMap(node => (
+                    <TreeNode
+                        children={node.children}
+                        content={node.content}
+                        label={node.label}
+                        nodeId={node.nodeId}
+                        onExpand={setTreeData}
+                    />
+                ))}
+            </ul>
+        </div>
+    );
 }

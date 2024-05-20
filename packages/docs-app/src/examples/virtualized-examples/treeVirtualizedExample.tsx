@@ -14,8 +14,44 @@
  * limitations under the License.
  */
 
-import { TreeVirtualized } from "@blueprintjs/virtualized";
+import React from "react";
+
+import { H1 } from "@blueprintjs/core";
+import { ITreeNode, TreeVirtualized } from "@blueprintjs/virtualized";
 
 export function TreeVirtualizedExample(): JSX.Element {
-    return TreeVirtualized({ foo: "foo" });
+    const node0: ITreeNode = {
+        children: [],
+        content: <></>,
+        isExpanded: false,
+        label: (
+            <>
+                <H1>Node0</H1>
+            </>
+        ),
+        nodeId: "node0",
+    };
+    const node1: ITreeNode = {
+        children: [node0],
+        content: <></>,
+        isExpanded: false,
+        label: (
+            <>
+                <H1>Node1</H1>
+            </>
+        ),
+        nodeId: "node1",
+    };
+    const node2: ITreeNode = {
+        children: [],
+        content: <></>,
+        isExpanded: false,
+        label: (
+            <>
+                <H1>Node2</H1>
+            </>
+        ),
+        nodeId: "node2",
+    };
+    return TreeVirtualized({ content: [node1, node2] });
 }
